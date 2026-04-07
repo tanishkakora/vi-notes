@@ -1,0 +1,123 @@
+/* Container */
+.notes-list {
+  margin-top: 1.5rem;
+  background: #202020;
+  border-radius: 14px;
+  border: 1px solid #2c2c2c;
+  overflow: hidden;
+}
+
+/* Header */
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.notes-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #eaeaea;
+  margin: 0;
+}
+
+.notes-header span {
+  font-size: 12px;
+  color: #9a9a9a;
+}
+
+/* Row */
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #2a2a2a;
+  transition: background 0.15s ease;
+}
+
+.note-item:last-child {
+  border-bottom: none;
+}
+
+/* subtle hover like real apps */
+.note-item:hover {
+  background: #262626;
+}
+
+/* Left side */
+.note-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f1f1f1;
+  margin-bottom: 4px;
+}
+
+/* meta text */
+.note-meta {
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+/* Right side */
+.note-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Confidence badge (pill style) */
+.confidence-badge {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* colors like your screenshot */
+.confidence-green {
+  background: #dff5e1;
+  color: #2e7d32;
+}
+
+.confidence-yellow {
+  background: #fff4db;
+  color: #a87400;
+}
+
+.confidence-red {
+  background: #fde2e2;
+  color: #c62828;
+}
+
+/* Button */
+.btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 1px solid #3a3a3a;
+  background: transparent;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* hover like "View report" button */
+.btn:hover {
+  background: #2d2d2d;
+  border-color: #555;
+}
+
+/* Empty state */
+.no-notes {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}

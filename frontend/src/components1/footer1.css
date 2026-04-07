@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #232323;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* Each stat block */
+.footer .stat {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+}
+
+/* Remove last border */
+.footer .stat:last-child {
+    border-right: none;
+}
+
+/* Labels */
+.footer .stat p:first-child {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 5px;
+}
+
+/* Values */
+.footer .stat p:last-child {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e5e5e5;
+}

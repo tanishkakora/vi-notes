@@ -1,0 +1,16 @@
+/* Full page */
+.report {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Middle content grows */
+.content {
+  flex: 1;
+}
+
+/* Footer pushed down */
+.footer2 {
+  margin-top: auto;
+}

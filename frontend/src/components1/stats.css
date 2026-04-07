@@ -1,0 +1,65 @@
+.stats {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.stat-box {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.stat-box p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.stat-box h3 {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Each stat block */
+.stat-box {
+  background: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+
+/* Subtle hover */
+.stat-box:hover {
+  background: #242424;
+  border-color: #3a3a3a;
+}
+
+/* Label (Words / Session Time) */
+.stat-box p {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 6px;
+}
+
+/* Value (0, 0m 0s) */
+.stat-box h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+.stat-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,78 @@
+.saved-notes {
+    background: #232323;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* HEADER */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.session-count {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* CARD */
+.note-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-top: 1px solid #333;
+}
+
+/* LEFT SIDE */
+.note-left h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.note-left p {
+    font-size: 13px;
+    color: #888;
+}
+
+/* RIGHT SIDE */
+.note-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* BADGE */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.green {
+    background: #1f3a2a;
+    color: #4ade80;
+}
+
+.yellow {
+    background: #3a3320;
+    color: #facc15;
+}
+
+/* BUTTON */
+.report-btn {
+    background: transparent;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.report-btn:hover {
+    background: #333;
+}

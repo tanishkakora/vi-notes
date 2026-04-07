@@ -1,0 +1,13 @@
+.stat {
+  background: #1f1f1f;
+  border: 1px solid #333;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: #232323;
+  padding: 15px;
+  border-radius: 12px;
+}
