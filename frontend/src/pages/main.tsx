@@ -68,7 +68,7 @@ function Main() {
     if (!text.trim()) return;
     console.log("Saving note:", { title, text, wpm, corrections, confidence, pasteCount });
 
-    const res = await fetch("http://localhost:3001/notes", {
+    const res = await fetch("https://vi-notes-2-h84r.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
