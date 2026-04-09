@@ -64,5 +64,3 @@ app.delete("/notes/:id", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
-app.listen(3001, () => console.log("Server running on port 3001"));
