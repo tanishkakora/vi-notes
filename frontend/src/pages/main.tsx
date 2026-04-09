@@ -6,6 +6,7 @@ import Footer1 from "../components1/footer1";
 import "./main.css";
 import NotesList from "../components1/NotesList";
 
+
 function Main() {
   const [text, setText] = useState("");
   const [startTime, setStartTime] = useState<number | null>(null);
