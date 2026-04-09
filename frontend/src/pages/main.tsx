@@ -30,15 +30,17 @@ function Main() {
   const [isSaved, setIsSaved] = useState(false);
   const [title, setTitle] = useState("");
 
+  const BASE_URL = "https://vi-notes-2-h84r.onrender.com";
+
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
   const minutes = time / 60;
   const wpm = time > 5 && minutes > 0 ? Math.round(wordCount / minutes) : 0;
 
-  // SINGLE handleChange — merged both versions
+ 
   const handleChange = (value: string) => {
     const now = Date.now();
 
-    setIsSaved(false); // reset saved badge on new input
+    setIsSaved(false); 
 
     if (lastKeyTime) {
       const diff = now - lastKeyTime;
@@ -69,7 +71,7 @@ function Main() {
     if (!text.trim()) return;
     console.log("Saving note:", { title, text, wpm, corrections, confidence, pasteCount });
 
-    const res = await fetch("https://vi-notes-2-h84r.onrender.com", {
+    const res = await fetch(`${BASE_URL}/notes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -86,7 +88,7 @@ function Main() {
     setSavedNotes((prev) => [saved, ...prev]);
     setIsSaved(true);
 
-    // 🔥 reset after save
+    
     setTitle("");
     setText("");
   };
@@ -134,15 +136,15 @@ function Main() {
   }, [startTime]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/notes")
-      .then((r) => r.json())
-      .then(setSavedNotes);
-  }, []);
+  fetch(`${BASE_URL}/notes`)
+    .then((r) => r.json())
+    .then(setSavedNotes);
+}, []);
 
   const handleDelete = async (id: string) => {
-    await fetch(`http://localhost:3001/notes/${id}`, { method: "DELETE" });
-    setSavedNotes((prev) => prev.filter((n) => n._id !== id));
-  };
+  await fetch(`${BASE_URL}/notes/${id}`, { method: "DELETE" });
+  setSavedNotes((prev) => prev.filter((n) => n._id !== id));
+};
 
   return (
     <div className="app">
